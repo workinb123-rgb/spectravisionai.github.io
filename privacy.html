@@ -1,177 +1,330 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | SpectraVision AI</title>
-
-<style>
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#0b1220;
-    color:#f2f2f2;
-    max-width:900px;
-    margin:auto;
-    padding:40px;
-    line-height:1.7;
-}
-
-h1,h2{
-    color:#40c4ff;
-}
-
-.container{
-    background:#16233d;
-    padding:30px;
-    border-radius:15px;
-}
-
-a{
-    color:#40c4ff;
-}
-
-ul{
-    line-height:1.8;
-}
-
-footer{
-    margin-top:40px;
-    color:#bfbfbf;
-    text-align:center;
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050810" />
+  <meta name="description" content="Privacy Policy for SpectraVision AI — a multi-spectrum computer vision and field analysis app." />
+  <title>Privacy Policy — SpectraVision AI</title>
+  <style>
+    :root {
+      --bg: #050810;
+      --card: #0b1220;
+      --fg: #e6edf6;
+      --muted: #94a3b8;
+      --primary: #06b6d4;
+      --primary-2: #38bdf8;
+      --emerald: #34d399;
+      --amber: #fbbf24;
+      --border: rgba(148, 163, 184, 0.16);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(6, 182, 212, 0.10), transparent 60%),
+        radial-gradient(900px 500px at -10% 10%, rgba(56, 189, 248, 0.08), transparent 60%),
+        var(--bg);
+      color: var(--fg);
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 40px 20px 96px; }
+    header.hero {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(6, 182, 212, 0.10), rgba(11, 18, 32, 0.6));
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      backdrop-filter: blur(8px);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      display: grid; place-items: center; color: #04222a; font-weight: 800; font-size: 20px;
+      box-shadow: 0 0 24px rgba(6, 182, 212, 0.45);
+    }
+    h1 { font-size: clamp(22px, 4vw, 30px); margin: 14px 0 4px; letter-spacing: -0.01em; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .chip {
+      font-size: 12px; padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--muted);
+    }
+    .chip strong { color: var(--fg); }
+    h2 {
+      font-size: 20px; margin: 40px 0 12px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border); scroll-margin-top: 24px;
+    }
+    h3 { font-size: 16px; margin: 24px 0 8px; color: var(--primary-2); }
+    p { margin: 10px 0; color: #d6deea; }
+    ul, ol { margin: 10px 0; padding-left: 22px; }
+    li { margin: 6px 0; color: #d6deea; }
+    a { color: var(--primary-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .grid { display: grid; gap: 12px; }
+    .card {
+      border: 1px solid var(--border); background: rgba(11, 18, 32, 0.6);
+      border-radius: var(--radius); padding: 18px 20px;
+    }
+    .toc { columns: 2; column-gap: 24px; }
+    .toc a { display: block; margin: 4px 0; font-size: 14px; }
+    @media (max-width: 640px) { .toc { columns: 1; } }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    td code { background: rgba(6,182,212,0.12); color: var(--primary-2); padding: 1px 6px; border-radius: 6px; font-size: 12px; }
+    .pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
+    .yes { color: var(--emerald); }
+    .no { color: var(--muted); }
+    .warn {
+      border: 1px solid rgba(251, 191, 36, 0.35); background: rgba(251, 191, 36, 0.08);
+      border-radius: var(--radius); padding: 14px 16px; color: #fde68a; font-size: 14px;
+    }
+    .note {
+      border: 1px solid rgba(6, 182, 212, 0.30); background: rgba(6, 182, 212, 0.08);
+      border-radius: var(--radius); padding: 14px 16px; color: #bae6fd; font-size: 14px;
+    }
+    .muted { color: var(--muted); }
+    .mono { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 12px; text-align: center; }
+    .back { position: fixed; right: 18px; bottom: 18px; }
+    .back a {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(6, 182, 212, 0.16); border: 1px solid rgba(6, 182, 212, 0.4);
+      color: var(--primary-2); padding: 10px 14px; border-radius: 12px; font-size: 13px;
+    }
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <div class="subtitle mono" style="letter-spacing:0.18em">SPECTRAVISION AI</div>
+          <div style="font-size:13px;color:var(--muted)">Multi-Spectrum Computer Vision &amp; Field Analysis</div>
+        </div>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">How SpectraVision AI collects, uses, and protects your information.</p>
+      <div class="meta">
+        <span class="chip"><strong>Effective:</strong> August 5, 2026</span>
+        <span class="chip"><strong>Developer:</strong> SpectraVision AI</span>
+        <span class="chip"><strong>Contact:</strong> workinb123@yahoo.com</span>
+      </div>
+    </header>
 
-<div class="container">
+    <h2 id="toc">Contents</h2>
+    <nav class="toc">
+      <a href__="#summary">At a Glance</a>
+      <a href__="#collect">Information We Collect</a>
+      <a href__="#use">How We Use Information</a>
+      <a href__="#ondevice">On-Device AI Processing</a>
+      <a href__="#camera">Camera &amp; Image Data</a>
+      <a href__="#audio">Microphone &amp; Audio Data</a>
+      <a href__="#location">Location Data</a>
+      <a href__="#sensors">Sensor Data</a>
+      <a href__="#storage">Cloud Storage &amp; Database</a>
+      <a href__="#auth">Authentication &amp; Google Sign-In</a>
+      <a href__="#third">Third-Party Services</a>
+      <a href__="#sharing">Data Sharing &amp; Disclosure</a>
+      <a href__="#retention">Retention &amp; Deletion</a>
+      <a href__="#security">Data Security</a>
+      <a href__="#rights">Your Rights &amp; Choices</a>
+      <a href__="#children">Children's Privacy</a>
+      <a href__="#cookies">Local Storage &amp; Tokens</a>
+      <a href__="#simulated">Simulated AI Notice</a>
+      <a href__="#permissions">Permissions Summary (Android)</a>
+      <a href__="#changes">Changes to This Policy</a>
+      <a href__="#contact">Contact</a>
+    </nav>
 
-<h1>Privacy Policy for SpectraVision AI</h1>
+    <h2 id="summary">At a Glance</h2>
+    <div class="note">
+      <strong>Key point:</strong> SpectraVision AI performs its computer-vision analysis
+      <strong>on your device</strong>. Your live camera frames are processed locally in the app and are
+      <strong>not</strong> uploaded to any server unless you explicitly capture a photo or video, or
+      choose to save or share content. There is no cloud AI service that receives your live camera stream.
+    </div>
+    <p>This Privacy Policy describes the data handled by the SpectraVision AI mobile application (the "App") and applies to all users. By using the App, you agree to the practices described here.</p>
 
-<p><strong>Effective Date:</strong> August 3, 2026</p>
+    <h2 id="collect">Information We Collect</h2>
 
-<h2>Introduction</h2>
+    <h3>Account information</h3>
+    <ul>
+      <li><strong>Email address</strong> — used to create and sign in to your account.</li>
+      <li><strong>Hashed password</strong> — when you register with email/password. Passwords are never stored in plain text; authentication is handled by the App's backend platform.</li>
+      <li><strong>Display name</strong> — derived from your email or Google profile, shown next to content you publish.</li>
+      <li><strong>Google profile</strong> — if you use Google Sign-In, Google shares your basic profile (name, email, and profile picture URL) with the App for sign-in and display.</li>
+    </ul>
 
-<p>
-SpectraVision AI ("we," "our," or "us") is committed to protecting your privacy.
-This Privacy Policy explains what information the app collects, how it is used,
-and the choices available to you.
-</p>
+    <h3>Camera data</h3>
+    <p>Live camera frames are accessed for real-time, on-device analysis and are <strong>not</strong> uploaded. When you choose to capture a photo or record a video, the resulting media file is uploaded to the App's cloud storage and stored with your account (see <a href__="#storage">Cloud Storage &amp; Database</a>).</p>
 
-<h2>Information We May Collect</h2>
+    <h3>Audio data</h3>
+    <p>Microphone input is used for the Audio Analyzer (waveform, spectrum, spectrogram) and the Audio Recorder. Audio is processed on-device. Audio recordings you create are kept locally in your browser session and are only stored off-device if you choose to export/download them. The App does not upload audio recordings to its servers.</p>
 
-<p>Depending on the features you use, SpectraVision AI may access:</p>
+    <h3>Location data</h3>
+    <p>GPS location (precise, device-derived latitude/longitude) is accessed only when you enable <strong>GPS Tagging</strong> in Settings (to embed coordinates in captures) or open the <strong>Satellite Tracker</strong> (to determine which satellites are overhead). Location is processed on-device; it is stored only when attached to a capture you save, or used transiently for satellite visibility calculations.</p>
 
-<ul>
-<li>Camera images and live video for real-time AI analysis.</li>
-<li>Device location (GPS) for augmented reality features, satellite tracking, and environmental awareness.</li>
-<li>Device orientation and motion sensor data, including the compass, accelerometer, gyroscope, and magnetometer.</li>
-<li>Device information such as operating system version, device model, and application diagnostics.</li>
-<li>User account information, including your email address, if you create an account.</li>
-<li>Photos or screenshots that you choose to save or share.</li>
-</ul>
+    <h3>Sensor data</h3>
+    <ul>
+      <li><strong>Magnetometer</strong> — magnetic field readings (X/Y/Z, total field, heading) for the Magnetic Sensor panel and anomaly detection. Processed on-device; anomaly events may include a GPS coordinate if location is available.</li>
+      <li><strong>Device orientation / compass</strong> — used by the UFO motion-tracking overlay to display heading and orientation. Processed on-device only.</li>
+    </ul>
 
-<h2>How We Use Information</h2>
+    <h3>User-generated content &amp; social data</h3>
+    <p>If you use the Community features, the App stores content you publish, including:</p>
+    <ul>
+      <li>Discoveries (title, description, photo, category) you upload or share from your Gallery.</li>
+      <li>Comments you write on discoveries.</li>
+      <li>Likes, follows, blocks, and reports you submit (which include your user ID/name and, for reports, the reported content and author).</li>
+      <li>Challenge progress, XP, badges, and achievement statistics tied to your account.</li>
+    </ul>
 
-<ul>
-<li>Provide AI-powered image analysis.</li>
-<li>Generate AI-simulated thermal, infrared, ultraviolet, and low-light visualizations.</li>
-<li>Display augmented reality overlays and satellite tracking.</li>
-<li>Improve application performance and reliability.</li>
-<li>Diagnose bugs and technical issues.</li>
-<li>Enhance future features and the overall user experience.</li>
-</ul>
+    <h3>Usage &amp; diagnostics</h3>
+    <p>The App's hosting/backend platform may collect limited, aggregate usage and diagnostic information (such as request logs, app version, and device type) needed to operate, secure, and improve the service. This may include an IP address and standard request metadata processed by the backend.</p>
 
-<h2>Camera and Sensor Data</h2>
+    <h3>Local device storage</h3>
+    <p>The App stores preferences on your device using browser storage, including: app settings (theme, resolution, units), panel layout positions, the startup-disclaimer acknowledgment, and (if you opt in) a handle to a local "msvd" gallery folder for saving captures directly to your device.</p>
 
-<p>
-Camera images and sensor information are used only to provide real-time functionality within the application.
-Unless you specifically choose to upload, save, or share content, camera frames are intended to be processed only while the app is in use.
-</p>
+    <h2 id="use">How We Use Information</h2>
+    <ul>
+      <li>Provide real-time, on-device multi-spectrum image analysis and visual overlays.</li>
+      <li>Generate simulated thermal, infrared, ultraviolet, and low-light visualizations from visible camera imagery.</li>
+      <li>Provide UFO motion detection and object tracking on the live camera feed.</li>
+      <li>Provide satellite tracking and overhead visibility based on your location.</li>
+      <li>Store, display, and let you manage the captures and content you choose to save or share.</li>
+      <li>Operate community features (feed, comments, likes, follows) and gamification (challenges, XP, badges).</li>
+      <li>Authenticate you, maintain your session, and secure your account.</li>
+      <li>Diagnose faults, prevent abuse, and improve reliability and features.</li>
+    </ul>
 
-<h2>Location Information</h2>
+    <h2 id="ondevice">On-Device AI Processing</h2>
+    <p>All computer-vision analysis in SpectraVision AI runs <strong>locally on your device</strong>:</p>
+    <ul>
+      <li><strong>Material/surface analysis</strong> uses on-device pixel heuristics (color ratios, brightness, saturation, edge density) to estimate a material and confidence score. It does not send frames to any server.</li>
+      <li><strong>Thermal, edge, and spectral overlays</strong> are rendered on a local canvas from the live video frame.</li>
+      <li><strong>UFO motion tracking</strong> uses on-device background subtraction and connected-component detection on a downscaled frame buffer.</li>
+      <li><strong>Estimated temperature and vegetation index</strong> are derived from pixel brightness and color ratios on-device and are clearly labeled as AI estimates.</li>
+    </ul>
+    <p>The App does <strong>not</strong> use a cloud-based AI/LLM service to analyze your camera feed. No live camera frame is transmitted off your device by the analysis features.</p>
 
-<p>
-Location information is used solely to provide satellite tracking, environmental analysis,
-mapping, and augmented reality positioning.
-</p>
+    <h2 id="camera">Camera &amp; Image Data</h2>
+    <p>Camera access is required for the core camera, analysis, and tracking features. Live frames stay on-device. A photo or video is uploaded to cloud storage <strong>only</strong> when you press the capture or record button. Each saved capture may include: the processed image/video, an optional unprocessed original (if "Save Original" is on), the active spectral mode, estimated material/confidence/temperature/vegetation index, and optional GPS coordinates (if GPS Tagging is on). You can view, edit, favorite, and delete your captures in the Gallery, and share a capture to the Community.</p>
 
-<p>
-You may disable location permissions at any time through your device settings.
-Some features may no longer function correctly if permissions are disabled.
-</p>
+    <h2 id="audio">Microphone &amp; Audio Data</h2>
+    <p>Microphone access is used only while the Audio Analyzer panel is active. The App records audio only when you press Record; recordings are held in your local browser session and are not uploaded. You can export a recording (and its metadata) as a download to your device. Microphone access stops when you leave the Camera tab or close the panel.</p>
 
-<h2>Data Sharing</h2>
+    <h2 id="location">Location Data</h2>
+    <p>Location is requested only for GPS Tagging and the Satellite Tracker. The App fetches public satellite position data from a third-party service (see <a href__="#third">Third-Party Services</a>) and computes which satellites are visible using your on-device GPS — your coordinates are <strong>not</strong> sent to that satellite service. When GPS Tagging is enabled, coordinates are attached to captures you save. You can disable location at any time in your device settings; satellite tracking will not work without it.</p>
 
-<p>We do not sell your personal information.</p>
+    <h2 id="sensors">Sensor Data</h2>
+    <p>Magnetometer and device-orientation data are read on-device for the Magnetic Sensor panel and the UFO overlay. Magnetic anomaly events are logged in your local session and may include a GPS coordinate (if available) for your reference; these logs are not uploaded unless you choose to save related content. Sensor availability depends on your device and browser.</p>
 
-<p>Information may only be shared:</p>
+    <h2 id="storage">Cloud Storage &amp; Database</h2>
+    <p>SpectraVision AI is built on the <strong>Base44</strong> backend platform, which provides authentication, a hosted database, file storage, and server functions. The following categories of data are stored in the App's cloud database, associated with your account:</p>
+    <table>
+      <thead><tr><th>Data category</th><th>Examples stored</th></tr></thead>
+      <tbody>
+        <tr><td>Account</td><td><code>email</code>, display name, role, user ID</td></tr>
+        <tr><td>Captures</td><td><code>file_url</code>, optional original, mode, material, confidence, temperature, vegetation index, GPS, metadata, favorite flag</td></tr>
+        <tr><td>Discoveries</td><td>title, description, image, category, author, like/comment counts, GPS</td></tr>
+        <tr><td>Interactions</td><td>comments, likes, follows, blocks, reports</td></tr>
+        <tr><td>Gamification</td><td>challenge progress, XP, badges, streak/distance stats</td></tr>
+      </tbody>
+    </table>
+    <p>Uploaded media files (photos/videos) are stored in Base44 file storage and referenced by URL from database records.</p>
 
-<ul>
-<li>With service providers that help operate the application.</li>
-<li>When required by law.</li>
-<li>To protect the security, rights, or safety of users and the application.</li>
-</ul>
+    <h2 id="auth">Authentication &amp; Google Sign-In</h2>
+    <p>You can create an account with email and password (with email verification via a one-time code) or sign in with Google. Email/password authentication and session tokens are managed by the Base44 platform. When you use Google Sign-In, Google authenticates you and shares your basic profile (name, email, profile picture) with the App; the App does not receive your Google password.</p>
 
-<h2>Data Security</h2>
+    <h2 id="third">Third-Party Services</h2>
+    <table>
+      <thead><tr><th>Service</th><th>Purpose</th><th>What it receives</th></tr></thead>
+      <tbody>
+        <tr><td>Base44 (backend platform)</td><td>Auth, database, file storage, hosting, server functions</td><td>Account data, stored content, uploaded media, request metadata/IP</td></tr>
+        <tr><td>Google Sign-In</td><td>Optional sign-in</td><td>Google handles authentication; shares your basic profile with the App</td></tr>
+        <tr><td>Google Fonts</td><td>Typography</td><td>Font requests (your IP address is visible to Google as part of the request)</td></tr>
+        <tr><td>Where The ISS At (wheretheiss.at)</td><td>Public satellite position data for the Satellite Tracker</td><td>Receives only a public data request; <strong>your GPS is not sent</strong> — visibility is computed on-device</td></tr>
+      </tbody>
+    </table>
+    <p>Each third-party service is governed by its own privacy policy and terms. The App does not sell your data to any third party.</p>
 
-<p>
-We use reasonable administrative and technical safeguards designed to protect
-user information from unauthorized access, disclosure, or misuse.
-</p>
+    <h2 id="sharing">Data Sharing &amp; Disclosure</h2>
+    <ul>
+      <li><strong>With service providers:</strong> Base44 (hosting/backend) processes data on the App's behalf to operate the service.</li>
+      <li><strong>Other users:</strong> Content you publish to the Community (discoveries, comments, likes, follows) is visible to other users, along with your display name.</li>
+      <li><strong>Legal &amp; safety:</strong> We may disclose information when required by law, or to protect the rights, property, or safety of users and the App, including investigating reports of abusive content.</li>
+      <li><strong>No sale of data:</strong> We do not sell personal information to third parties.</li>
+    </ul>
 
-<h2>Children's Privacy</h2>
+    <h2 id="retention">Data Retention &amp; Deletion</h2>
+    <p>Your account data is retained while your account is active. You can delete individual captures, discoveries, comments, and other content from within the App at any time.</p>
+    <p>You can permanently delete your account from <strong>Settings → Delete Account</strong>. Account deletion is irreversible and removes:</p>
+    <ul>
+      <li>Your user record and sign-in account.</li>
+      <li>All your database records: captures, discoveries, comments, likes, reports, blocks, follows, challenge progress, and statistics.</li>
+      <li>All your uploaded media files (photos and videos) from Base44 file storage, including processed captures, saved originals, and shared discovery images.</li>
+    </ul>
+    <p>Deletion begins immediately when you confirm. Once complete, your data cannot be recovered.</p>
 
-<p>
-SpectraVision AI is not intended for children under 13 years of age.
-We do not knowingly collect personal information from children.
-</p>
+    <h2 id="security">Data Security</h2>
+    <p>We use reasonable administrative and technical safeguards to protect your information, including authenticated access to your own data and row-level isolation so that private records (such as your captures and stats) are only accessible by you. No method of transmission or storage is fully secure, however, and we cannot guarantee absolute security.</p>
 
-<h2>Your Choices</h2>
+    <h2 id="rights">Your Rights &amp; Choices</h2>
+    <ul>
+      <li><strong>Permissions:</strong> You can deny or revoke Camera, Microphone, Location, and Sensor permissions at any time in your device settings. Some features will not function without them.</li>
+      <li><strong>Content:</strong> Delete your captures, discoveries, and comments from within the App.</li>
+      <li><strong>Account:</strong> Permanently delete your account and associated database records from Settings.</li>
+      <li><strong>Local data:</strong> Clear the App's local storage (settings, layout, disclaimer) by clearing site data for the App.</li>
+      <li><strong>Google:</strong> Manage or revoke the App's access to your Google account from your Google account security settings.</li>
+    </ul>
 
-<ul>
-<li>Deny camera, location, or sensor permissions.</li>
-<li>Delete your account if account creation is supported.</li>
-<li>Contact us to request deletion of personal information where applicable.</li>
-</ul>
+    <h2 id="children">Children's Privacy</h2>
+    <p>The App is not directed to children under 13 years of age and is not intended for use by them. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us so we can delete it.</p>
 
-<h2>Changes to This Privacy Policy</h2>
+    <h2 id="cookies">Local Storage &amp; Tokens</h2>
+    <p>The App does not use advertising cookies. It uses local browser storage to remember your settings, panel layout, and disclaimer acknowledgment, and an authentication token to keep you signed in. This data stays on your device unless you clear it.</p>
 
-<p>
-This Privacy Policy may be updated periodically.
-The Effective Date at the top of this page will reflect the latest version.
-</p>
+    <h2 id="simulated">Simulated AI Notice</h2>
+    <p>SpectraVision AI uses computer vision to generate <strong>simulated</strong> thermal, infrared, ultraviolet, and low-light visualizations from the visible camera image. The App does not provide true thermal imaging or scientific measurement and should not be relied upon as a substitute for specialized equipment. Estimated values (material, temperature, vegetation index) are approximate, on-device estimates.</p>
 
-<h2>Contact</h2>
+    <h2 id="permissions">Permissions Summary (Android)</h2>
+    <p>The App requests the following device permissions, each tied to a specific feature:</p>
+    <table>
+      <thead><tr><th>Permission</th><th>Feature</th><th>Required?</th></tr></thead>
+      <tbody>
+        <tr><td>Camera</td><td>Camera, analysis, overlays, UFO tracking, capture/record</td><td>Required for camera features</td></tr>
+        <tr><td>Microphone</td><td>Audio Analyzer &amp; Recorder</td><td>Optional (only for audio features)</td></tr>
+        <tr><td>Location (precise)</td><td>GPS Tagging, Satellite Tracker</td><td>Optional</td></tr>
+        <tr><td>Sensors (magnetometer / orientation)</td><td>Magnetic Sensor, UFO compass/heading</td><td>Optional (device-dependent)</td></tr>
+        <tr><td>Storage / Media access</td><td>Saving captures to a local "msvd" folder (File System Access) and downloads</td><td>Optional</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">All permissions are requested at runtime, only when the relevant feature is used, and can be revoked in device settings.</p>
 
-<p>
-For privacy-related questions, please contact:
-</p>
+    <h2 id="changes">Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The "Effective" date at the top of this page reflects the latest version. Material changes will be reflected by an updated effective date. Continued use after changes constitutes acceptance.</p>
 
-<p>
-<strong>Email:</strong><br>
-<a href="mailto:workinb123@yahoo.com">workinb123@yahoo.com</a>
-</p>
+    <h2 id="contact">Contact</h2>
+    <p>For privacy questions, data requests, or to request removal of a specific uploaded file, contact:</p>
+    <div class="card">
+      <p style="margin:4px 0"><strong>SpectraVision AI</strong></p>
+      <p style="margin:4px 0">Email: <a href__="mailto:workinb123@yahoo.com">workinb123@yahoo.com</a></p>
+    </div>
 
-<hr>
+    <footer>
+      <p>SpectraVision AI · Privacy Policy · Effective August 5, 2026</p>
+      <p class="muted">This document is provided for informational purposes and does not constitute legal advice.</p>
+    </footer>
+  </div>
 
-<p><strong>Important Notice</strong></p>
-
-<p>
-SpectraVision AI uses artificial intelligence and computer vision to generate
-<strong>simulated</strong> thermal, infrared, ultraviolet, and low-light visualizations.
-The app does not provide true thermal imaging or scientific measurement capabilities
-and should not be relied upon as a substitute for specialized equipment.
-</p>
-
-</div>
-
-<footer>
-
-© 2026 SpectraVision AI
-
-</footer>
-
+  <div class="back"><a href__="/">← Back to App</a></div>
 </body>
 </html>
